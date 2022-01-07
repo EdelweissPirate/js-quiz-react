@@ -1,7 +1,12 @@
 import menuOptions from "../data/menuOptions";
 import CustomLink from '../shared/CustomLink';
 
-function DifficultyMenu(props) {
+
+function MainMenu(props) {
+    // TODO - essentially recreated react-router component 
+    // branched off for revision
+    // passing desired variable via props and state instead 
+
     function getButtonPath(item) {
         switch (item.title) {
             case 'START':
@@ -16,22 +21,22 @@ function DifficultyMenu(props) {
             default:
                 return '/'
         }
-    }
+    };
 
     return (
-        <section style={{backgroundColor: 'lightBlue', color: 'rgba(0, 0, 0, 1)', padding: 20}}>
+        <div>
         <h3>
-            Choose your difficulty
+            Test your {props.codeLang} knowledge
         </h3>
 
         <ul style={listButtonStyles}>
-            {menuOptions[1].map((item) => (
+            {menuOptions[0].map((item) => (
                 <CustomLink path={getButtonPath(item)} key={item.id} button={true}>
                     {item.title}
                 </CustomLink>
             ))}
         </ul>
-        </section>
+        </div>
     )
 }
 
@@ -39,9 +44,9 @@ const listButtonStyles = {
     listStyle: 'none', 
     display: 'flex', 
     justifyContent:'center', 
-    flexDirection:'row', 
+    flexDirection:'column', 
     alignItems: 'center', 
     padding: 0,
 };
 
-export default DifficultyMenu
+export default MainMenu

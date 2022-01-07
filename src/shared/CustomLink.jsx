@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function CustomLink({ children, path, button }) {
+function CustomLink({ children, path, button, clickHandle }) {
     function MouseOver(event) {
         event.target.style.color = 'pink';
     }
@@ -10,7 +10,7 @@ function CustomLink({ children, path, button }) {
     }
     
     return (
-        <Link to={path} style={button ? customLinkStyles1 : customLinkStyles2} onMouseOver={MouseOver} onMouseOut={MouseOut}>
+        <Link to={path} onClick={clickHandle} style={button ? customLinkStyles1 : customLinkStyles2} onMouseOver={MouseOver} onMouseOut={MouseOut}>
             {children}
         </Link>
     )

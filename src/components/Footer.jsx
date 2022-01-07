@@ -25,15 +25,15 @@ function Footer(props){
 
     return (
         <footer style={{backgroundColor: 'darkBlue', color:"white", alignItems: 'center'}}>
-            <div style={{display:'flex', justifyContent: 'space-around', alignItems: 'center'}}>
-                <h4>
+            <div style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <h4 style={{padding: '0px 20px'}}>
                     TEST YOUR MIGHT
                 </h4>
-                <div style={{display:'flex', justifyContent: 'space-around', padding: 20, alignItems: 'center'}}>
+                <div style={{display:'flex', justifyContent: 'flex-end', padding: 20, alignItems: 'center'}}>
                     <h5 style={{paddingRight:20}}>
                     Copyright {props.year}
                     </h5>
-                    <a href='https://github.com/EdelweissPirate' target="_blank" rel="noopener noreferrer">
+                    <a href='https://github.com/EdelweissPirate' target="_blank" rel="noopener noreferrer" title="visit GitHub.com">
                         <img src={iconURL} alt='missing logo' height={50}/>
                     </a>
                 </div>

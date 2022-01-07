@@ -17,7 +17,6 @@ function Header(props){
 const headerStyles = {
     backgroundColor: 'darkBlue',
     color: 'rgba(255, 255, 255, 1)',
-    padding: 20, 
     display: 'flex', 
     justifyContent: 'center',
     flexDirection: 'row',
