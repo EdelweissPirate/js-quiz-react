@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function Button({children, version, type, isDisabled}) {
+function Button({children, version, type, isDisabled, clickHandle}) {
     function MouseOver(event) {
         event.target.style.color = 'pink';
     }
@@ -17,6 +17,7 @@ function Button({children, version, type, isDisabled}) {
         style={buttonStyles}
         onMouseOver={MouseOver} 
         onMouseOut={MouseOut}
+        onClick={clickHandle}
         >
             {children}
         </button>
@@ -38,7 +39,8 @@ const buttonStyles = {
     padding: '1.5rem 3rem',
     textDecoration: 'none',
     borderRadius: '1rem',
-    width: '15rem',  
+    width: '15rem',
+    cursor: 'pointer'
 };
 
 Button.propsType = {

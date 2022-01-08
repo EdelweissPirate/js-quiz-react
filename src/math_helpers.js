@@ -1,113 +1,108 @@
-function sqrt(x){
+export function sqrt(x){
     return Math.sqrt(x);
 }
-function sq(x){
+export function sq(x){
     return Math.pow(x,2);
 }
-function atan(x){
+export function atan(x){
     return Math.atan(x);
 }
-function atan2(y,x){
+export function atan2(y,x){
     return Math.atan2(y,x);
 }
-function asin(x){
+export function asin(x){
     return Math.asin(x);
 }
-function sin(x){
+export function sin(x){
     return Math.sin(x);
 }
-function cos(x){
+export function cos(x){
     return Math.cos(x);
 }
-function tan(x){
+export function tan(x){
     return Math.tan(x);
 }
-function round(x){
+export function round(x){
     return Math.round(x);
 }
-function roundTo(x,places){
+export function roundTo(x,places){
     var rounder = pow(10,places);
     return round(x * rounder)/rounder;
 }
 
-function floor(x){
+export function floor(x){
     return Math.floor(x);
 }
-function ceil(x){
+export function ceil(x){
     return Math.ceil(x);
 }
 
-function max(x,y){
+export function max(x,y){
     return Math.max(x,y);
 }
-function min(x,y){
+export function min(x,y){
     return Math.min(x,y);
 }
-function mid(x,y){
+export function mid(x,y){
     return x + (y - x)/2;
 }
-function between(min,max,n){
+export function between(min,max,n){
     return line_y(n,min,min,max);
 }
-function inverse_between(min,max,val){
+export function inverse_between(min,max,val){
     return 1 - (max - val)/(max - min);
 }
-function limit(l_bound,u_bound,x){
+export function limit(l_bound,u_bound,x){
     var l = min(l_bound,u_bound);
     var u = max(l_bound,u_bound);
     return min(u,max(l,x));
 }
 
-function exp(x){
+export function exp(x){
     return Math.exp(x);
 }
 
-function log(x){
+export function log(x){
     return Math.log(x);
 }
-function pow(x,n){
+export function pow(x,n){
     return Math.pow(x,n);
 }
-function log_10(x){
+export function log_10(x){
     return log(x)/log(10);
 }
 
-function abs(x){
+export function abs(x){
     return Math.abs(x);
 }
-function dir(x){
+export function dir(x){
     return x/abs(x);
 }
-function dif(x,y){
+export function dif(x,y){
     return abs(x - y);
 }
 
-function pi(){
+export function pi(){
     return Math.PI;
 }
-function radToDeg(angle){
+export function radToDeg(angle){
     return angle*180/pi();
 }
-function degToRad(angle){
+export function degToRad(angle){
     return angle*pi()/180;
 }
 
-function toDeg(angle){
+export function toDeg(angle){
     return radToDeg(angle);
 }
-function toRad(angle){
+export function toRad(angle){
     return degToRad(angle);
 }
 
-
-
-
-
-
-function line_y(m,x0,y0,x){
+export function line_y(m,x0,y0,x){
     return m * (x - x0) + y0;
 }
-function quadratic_formula(A,B,C){
+export function quadratic_formula(A,B,C){
     var desc = sq(B) - 4 * A * C;
     var solutions = [];
     if(desc > 0){
@@ -123,12 +118,12 @@ function quadratic_formula(A,B,C){
     return solutions;
 }
 
-function distance_between(x1,y1,x2,y2){
+export function distance_between(x1,y1,x2,y2){
     return sqrt(sq(x2 - x1) + sq(y2 - y1));
 }
 
 
-function line_y_fromPoints(x1,y1,x2,y2,x){
+export function line_y_fromPoints(x1,y1,x2,y2,x){
     var m = (y2 - y1)/(x2 - x1);
     return line_y(m,x1,y1,x);
 }

@@ -3,20 +3,6 @@
   color: '#ffffff'
 }
 
-a:hover{
-  color: 'pink'
-}
-
-
 @media (prefers-reduced-motion: no-preference) {
   
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

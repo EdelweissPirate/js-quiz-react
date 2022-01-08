@@ -38,9 +38,8 @@ section {
   margin: 0;
 }
 
-div{
+div {
   flex: 1;
-  width: 100%;
 }
 
 footer {
@@ -57,10 +56,15 @@ footer {
   align-items: center;
 }
 
-.container{
+a:hover{
+  color: 'pink'
+}
+
+.container {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   align-content: center;
+  width: 100%;
 }

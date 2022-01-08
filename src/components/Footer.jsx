@@ -25,7 +25,7 @@ function Footer(props){
 
     return (
         <footer style={{backgroundColor: 'darkBlue', color:"white", alignItems: 'center'}}>
-            <div style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', padding: '0px 2rem'}}>
                 <h4 style={{padding: '0px 20px'}}>
                     TEST YOUR MIGHT
                 </h4>
